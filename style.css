@@ -1,0 +1,147 @@
+:root {
+    --primary-color: #12130F;
+    --secondary-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--primary-color);
+    background-image: radial-gradient(white 1px, transparent 0px);
+    background-repeat: repeat;
+    background-size: 63px 63px;
+    background-position: center;
+}
+
+.container {
+    background-color: var(--secondary-color);
+    font-size: 1.2rem;
+    font-family: Helvetica, Arial, sans-serif;
+    height: 130px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.container .navbar {
+    justify-content: space-between;
+}
+
+.container .navbar ul li {
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.navbar a {
+    color: grey;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar a:hover{
+    color: black;
+}
+
+.content {
+    position: fixed;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+section {
+    display: flex;
+    text-align: left;
+}
+
+.rainbow {
+      display: inline-flex;
+      cursor: pointer;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .rainbow span {
+      display: inline-block;
+      transition: transform 0.25s ease, color 0.25s ease;
+      color: black;
+    }
+
+    .rainbow:hover span {
+      transform: translateY(-4px);
+    }
+
+.rainbow span:nth-child(1) { transition-delay: 0ms;  }
+    .rainbow:hover span:nth-child(1) { color: pink; }
+
+.rainbow span:nth-child(2) { transition-delay: 25ms; }
+    .rainbow:hover span:nth-child(2) { color: pink; }
+
+.rainbow span:nth-child(3) { transition-delay: 50ms; }
+    .rainbow:hover span:nth-child(3) { color: pink; }
+
+.rainbow span:nth-child(4) { transition-delay: 75ms; }
+    .rainbow:hover span:nth-child(4) { color: pink; }
+
+.rainbow span:nth-child(5) { transition-delay: 100ms; }
+    .rainbow:hover span:nth-child(5) { color: pink; }
+
+.rainbow span:nth-child(6) { transition-delay: 125ms; }
+    .rainbow:hover span:nth-child(6) { color: pink; }
+
+.rainbow span:nth-child(7) { transition-delay: 150ms; }
+    .rainbow:hover span:nth-child(7) { color: pink; }
+
+.rainbow span:nth-child(8) { transition-delay: 175ms; }
+    .rainbow:hover span:nth-child(8) { color: pink; }
+
+.rainbow span:nth-child(9) { transition-delay: 200ms; }
+    .rainbow:hover span:nth-child(9) { color: pink; }
+
+.rainbow span:nth-child(10) { transition-delay: 225ms; }
+    .rainbow:hover span:nth-child(10) { color: pink; }
+
+.rainbow span:nth-child(11) { transition-delay: 250ms; }
+    .rainbow:hover span:nth-child(11) { color: pink; }
+
+.rainbow span:nth-child(12) { transition-delay: 275ms; }
+    .rainbow:hover span:nth-child(12) { color: pink; }
+
+.rainbow span:nth-child(13) { transition-delay: 300ms; }
+    .rainbow:hover span:nth-child(13) { color: pink; }
+
+.rainbow span:nth-child(14) { transition-delay: 325ms; }
+    .rainbow:hover span:nth-child(14) { color: pink; }
+
+.rainbow span:nth-child(15) { transition-delay: 350ms; }
+    .rainbow:hover span:nth-child(15) { color: pink; }
+
+.rainbow span:nth-child(16) { transition-delay: 375ms; }
+    .rainbow:hover span:nth-child(16) { color: pink; }
+
+.rainbow span:nth-child(17) { transition-delay: 400ms; }
+    .rainbow:hover span:nth-child(17) { color: pink; }
+
+.rainbow span:nth-child(18) { transition-delay: 425ms; }
+    .rainbow:hover span:nth-child(18) { color: pink; }
+
+
