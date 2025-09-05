@@ -73,6 +73,17 @@ section {
     text-align: left;
 }
 
+section a {
+    padding-top: 0.2rem;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+section a:hover {
+    color: grey;
+}
+
 .rainbow {
       display: inline-flex;
       cursor: pointer;
