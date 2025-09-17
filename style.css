@@ -1,6 +1,10 @@
 :root {
-    --primary-color: #12130F;
-    --secondary-color: white;
+    --navbar-color: #0D0C1D;
+    --navbar-text: #fff;
+    --body-color: #0D0C1D;
+    --body-text: #fff;
+    --footer-color: #0D0C1D;
+    --footer-text: #fff;
 }
 
 * {
@@ -9,17 +13,32 @@
 }
 
 body {
-    background-color: var(--primary-color);
-    background-image: radial-gradient(white 1px, transparent 0px);
-    background-repeat: repeat;
-    background-size: 63px 63px;
-    background-position: center;
+    background-color: var(--body-color);
+    display: flex;
+    flex-direction: column;
 }
 
-.container {
-    background-color: var(--secondary-color);
-    font-size: 1.2rem;
-    font-family: Helvetica, Arial, sans-serif;
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+section {
+    color: var(--body-text)
+}
+
+h3 {
+    text-align: center;
+    color: var(--body-text);
+    font-weight: normal;
+}
+
+#navbar-container {
+    background-color: var(--navbar-color);
     height: 130px;
 }
 
@@ -37,122 +56,80 @@ body {
     list-style-type: none;
 }
 
-.container .navbar {
+#navbar-container .navbar {
     justify-content: space-between;
 }
 
-.container .navbar ul li {
+#navbar-container .navbar ul li {
     padding: 10px;
     margin: 0 10px;
 }
 
 .navbar a {
-    color: grey;
-    font-weight: bold;
+    color: var(--navbar-text);
     text-decoration: none;
 }
 
-.navbar a:hover{
-    color: black;
+.navbar a:hover {
+    text-decoration: underline;
 }
 
-.content {
-    position: fixed;
-    height: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 15px;
-    font-size: 1.2rem;
-    font-family: Helvetica, Arial, sans-serif;
+.navbar h1 {
+    color: var(--navbar-text);
+    font-weight: normal;
+    text-shadow: 0px 3px 3px #ababab;
 }
 
-section {
+
+#footer-container {
+    background-color: var(--footer-color);
+    min-height: 100%;
+    height: 70px;
+}
+
+.footer {
     display: flex;
-    text-align: left;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 80%;
+    margin: auto;
 }
 
-section a {
-    padding-top: 0.2rem;
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
+.footer ul {
+    display: flex;
+    list-style-type: none;
 }
 
-section a:hover {
-    color: grey;
+#footer-container .footer ul li {
+    padding: 10px;
+    margin: 0 10px;
+    color: var(--footer-text);
 }
 
-.rainbow {
-      display: inline-flex;
-      cursor: pointer;
-      font-size: 2.5rem;
-      font-weight: bold;
-    }
+#map {
+    height: auto;
+    width: auto;
+    align-items: center;
+    padding: 0;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    margin-left: 10em;
+    margin-right: 10em;
+}
 
-    .rainbow span {
-      display: inline-block;
-      transition: transform 0.25s ease, color 0.25s ease;
-      color: black;
-    }
+.grid-item {
+    position: static;
+    height: 450px;
+}
 
-    .rainbow:hover span {
-      transform: translateY(-4px);
-    }
-
-.rainbow span:nth-child(1) { transition-delay: 0ms;  }
-    .rainbow:hover span:nth-child(1) { color: pink; }
-
-.rainbow span:nth-child(2) { transition-delay: 25ms; }
-    .rainbow:hover span:nth-child(2) { color: pink; }
-
-.rainbow span:nth-child(3) { transition-delay: 50ms; }
-    .rainbow:hover span:nth-child(3) { color: pink; }
-
-.rainbow span:nth-child(4) { transition-delay: 75ms; }
-    .rainbow:hover span:nth-child(4) { color: pink; }
-
-.rainbow span:nth-child(5) { transition-delay: 100ms; }
-    .rainbow:hover span:nth-child(5) { color: pink; }
-
-.rainbow span:nth-child(6) { transition-delay: 125ms; }
-    .rainbow:hover span:nth-child(6) { color: pink; }
-
-.rainbow span:nth-child(7) { transition-delay: 150ms; }
-    .rainbow:hover span:nth-child(7) { color: pink; }
-
-.rainbow span:nth-child(8) { transition-delay: 175ms; }
-    .rainbow:hover span:nth-child(8) { color: pink; }
-
-.rainbow span:nth-child(9) { transition-delay: 200ms; }
-    .rainbow:hover span:nth-child(9) { color: pink; }
-
-.rainbow span:nth-child(10) { transition-delay: 225ms; }
-    .rainbow:hover span:nth-child(10) { color: pink; }
-
-.rainbow span:nth-child(11) { transition-delay: 250ms; }
-    .rainbow:hover span:nth-child(11) { color: pink; }
-
-.rainbow span:nth-child(12) { transition-delay: 275ms; }
-    .rainbow:hover span:nth-child(12) { color: pink; }
-
-.rainbow span:nth-child(13) { transition-delay: 300ms; }
-    .rainbow:hover span:nth-child(13) { color: pink; }
-
-.rainbow span:nth-child(14) { transition-delay: 325ms; }
-    .rainbow:hover span:nth-child(14) { color: pink; }
-
-.rainbow span:nth-child(15) { transition-delay: 350ms; }
-    .rainbow:hover span:nth-child(15) { color: pink; }
-
-.rainbow span:nth-child(16) { transition-delay: 375ms; }
-    .rainbow:hover span:nth-child(16) { color: pink; }
-
-.rainbow span:nth-child(17) { transition-delay: 400ms; }
-    .rainbow:hover span:nth-child(17) { color: pink; }
-
-.rainbow span:nth-child(18) { transition-delay: 425ms; }
-    .rainbow:hover span:nth-child(18) { color: pink; }
-
-
+.amap {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
