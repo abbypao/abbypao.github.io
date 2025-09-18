@@ -38,7 +38,6 @@ h3 {
 }
 
 a {
-    text-align: center;
     color: var(--body-text);
     font-weight: normal;
     text-decoration: none;
@@ -49,6 +48,7 @@ a:hover {
 }
 
 li {
+    text-align: center;
     list-style-type: none;
 }
 
