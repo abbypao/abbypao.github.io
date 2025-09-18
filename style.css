@@ -37,6 +37,17 @@ h3 {
     font-weight: normal;
 }
 
+a {
+    text-align: center;
+    color: var(--body-text);
+    font-weight: normal;
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
 #navbar-container {
     background-color: var(--navbar-color);
     height: 130px;
