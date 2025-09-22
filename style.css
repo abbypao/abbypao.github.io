@@ -57,6 +57,11 @@ li {
     list-style-type: none;
 }
 
+#indeximg {
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
 #navbar-container {
     background-color: var(--navbar-color);
     height: 130px;
