@@ -58,6 +58,7 @@ li {
 }
 
 #indeximg {
+    align-items: center;
     margin-top: 90px;
     margin-bottom: 90px;
 }
