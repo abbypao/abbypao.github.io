@@ -32,21 +32,21 @@
             <legend><span>Choose an address</span></legend>
             <label for="homeoption" id="homeaddr">
                <div>Home</div>
-               <script>document.write("<p>"+homeStreet+"<br>"+homeCity+", "+homeState+" "+homeCode);</script>
+               <script>document.write("<p>"+homeStreet+"<br>"+homeCity+", "+homeState+" "+homeCode+"</p>");</script>
                <input type="radio" id="homeoption" name="shippingaddr" 
                onclick="document.getElementById('street') = homeStreet;
                document.getElementById('city') = homeCity;
                document.getElementById('state') = homeState;
-               document.getElementById('code') = homeCode;" />
+               document.getElementById('code') = homeCode;">
             </label>
             <label for="workoption" id="workaddr">
                <div>Work</div>
-               <script>document.write("<p>"+workStreet+"<br>"+workCity+", "+workState+" "+workCode);</script>
+               <script>document.write("<p>"+workStreet+"<br>"+workCity+", "+workState+" "+workCode+"</p>");</script>
                <input type="radio" id="workoption" name="shippingaddr"
                onclick="document.getElementById('street') = workStreet;
                document.getElementById('city') = workCity;
                document.getElementById('state') = workState;
-               document.getElementById('code') = workCode;" />
+               document.getElementById('code') = workCode;">
             </label>
          </fieldset>
          
