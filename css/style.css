@@ -60,7 +60,8 @@ li {
 img {
     display: block;
     margin: auto;
-    max-width: 50%;
+    margin-top: 15vh;
+    width: 50%;
 }
 
 
