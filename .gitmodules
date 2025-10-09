@@ -1,3 +1,6 @@
 [submodule "auto-adv"]
 	path = auto-adv
 	url = https://github.com/abbypao/auto-adv.git
+[submodule "auto-adv-build"]
+	path = auto-adv-build
+	url = https://github.com/abbypao/auto-adv-build.git
