@@ -34,8 +34,13 @@ export default function Footer() {
       <p className="mt-8 text-neutral-600 dark:text-neutral-300">
         © {new Date().getFullYear()} Abigail Smith
       </p>
-      <p className="mt-2 text-neutral-600 hover:text-neutral-800 dark:text-neutral-300">
-        <a href="mailto:abigail.smith@stu.cvccworks.edu">abigail.smith@stu.cvccworks.edu</a>
+      <p className="mt-2 text-neutral-600 dark:text-neutral-300">
+        <a 
+          className="hover:text-neutral-800 dark:hover:text-neutral-100 transition-all"
+          href="mailto:abigail.smith@stu.cvccworks.edu"
+        >
+          abigail.smith@stu.cvccworks.edu
+        </a>
       </p>
     </footer>
   )
