@@ -1,3 +1,5 @@
+import AdaptiveMap from '@/app/components/adaptive-map'
+
 export default function Page() {
   return (
     <section>
@@ -8,6 +10,7 @@ export default function Page() {
         {`plc`}
       </p>
       <div className="my-8">
+        <AdaptiveMap />
       </div>
     </section>
   )
