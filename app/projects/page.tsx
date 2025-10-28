@@ -28,6 +28,11 @@ export default function Page() {
             link: "/html/fitness6/index.html"
         },
         {
+            name: "Fitness Chapter 7",
+            description: "HTML",
+            link: "/html/fitness7/index.html"
+        },
+        {
             name: "Chapter 1",
             description: "JavaScript",
             link: "/javascript/chapter1/js01.html"
