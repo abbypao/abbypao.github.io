@@ -74,10 +74,10 @@ export default function Page() {
                                 fill="currentColor" />
                         </svg>
                         <div>
-                            <p className="text-neutral-900 dark:text-neutral-100">
-                                <a className="hover:text-neutral-400 dark:hover:text-neutral-300 transition-all" href={project.link}>{project.name}</a>
+                            <p className="text-neutral-900">
+                                <a className="hover:text-neutral-400 transition-all" href={project.link}>{project.name}</a>
                             </p>
-                            <p className="text-neutral-600 dark:text-neutral-300">{project.description}</p>
+                            <p className="text-neutral-600">{project.description}</p>
                         </div>
                     </div>
                 ))}

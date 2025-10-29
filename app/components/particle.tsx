@@ -6,19 +6,6 @@ import { loadSlim } from "tsparticles-slim";
 
 export default function ParticlesBackground() {
   const [particleCount, setParticleCount] = useState<number>(0);
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    setIsDarkMode(mediaQuery.matches);
-
-    const handleChange = (e: MediaQueryListEvent) => {
-      setIsDarkMode(e.matches);
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, []);
 
   const particlesInit = useCallback(async (engine: any) => {
     await loadSlim(engine);
@@ -46,7 +33,7 @@ export default function ParticlesBackground() {
           options={{
             background: {
               color: {
-                value: isDarkMode ? "#000000" : "#ffffff",
+                value: "#ffffff",
               },
               position: "50% 50%",
               repeat: "no-repeat",
@@ -92,17 +79,17 @@ export default function ParticlesBackground() {
             },
             particles: {
               color: {
-                value: isDarkMode ? "#ffffff" : "#000000",
+                value: "#000000",
               },
               links: {
-                color: isDarkMode ? "#ffffff" : "#000000",
+                color: "#000000",
                 distance: 175,
                 enable: true,
-                opacity: 0.015,
-                width: 1,
+                opacity: 0.035,
+                width: 0.5,
               },
               move: {
-                direction: "none",
+                direction: "bottom-left",
                 enable: true,
                 outModes: {
                   default: "out",
@@ -119,7 +106,7 @@ export default function ParticlesBackground() {
                 value: 160,
               },
               opacity: {
-                value: 1,
+                value: 0,
                 random: true,
                 animation: {
                   enable: true,

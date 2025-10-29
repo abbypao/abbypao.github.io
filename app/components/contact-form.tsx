@@ -25,21 +25,6 @@ export default function ContactForm() {
 
     const [formErrors, setFormErrors] = useState<FormErrors>({});
     const [submitted, setSubmitted] = useState(false);
-    const [isDark, setIsDark] = useState(false);
-
-    useEffect(() => {
-        const checkTheme = () => {
-            setIsDark(window.matchMedia('(prefers-color-scheme: dark)').matches)
-        }
-
-        checkTheme()
-
-        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-        const handler = (e: MediaQueryListEvent) => setIsDark(e.matches)
-
-        mediaQuery.addEventListener('change', handler)
-        return () => mediaQuery.removeEventListener('change', handler)
-    }, [])
 
     const validateForm = (): boolean => {
         const errors: FormErrors = {};
@@ -91,22 +76,65 @@ export default function ContactForm() {
         }
     };
 
-    
+
 
     return (
-        <form onSubmit={handleSubmit} className={`p-6 rounded-lg border ${isDark ? 'border-neutral-800 bg-black' : 'border-neutral-200 bg-white'} shadow-sm`}>
         <div>
-        <label htmlFor="email" className="block mb-2 font-medium">Email:</label>
-        <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className={`w-full p-2 border rounded ${formErrors.email ? 'border-red-500' : 'border-neutral-300'} ${isDark ? 'bg-neutral-800 text-white' : 'bg-white text-black'}`}
-        />
-        {formErrors.email && <p className="text-red-500 mt-1">{formErrors.email}</p>}
+            {submitted ? (
+                <div>
+                    <p></p>
+                </div>
+            ) : (
+                <form onSubmit={handleSubmit} className={`p-6 rounded-lg border border-neutral-200 bg-white shadow-sm`}>
+                    <div className="mb-4">
+                        <label htmlFor="email" className="block mb-2 font-medium">Email:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            className={`w-full px-4 py-2 border rounded focus:ring-2 focus:ring-black focus:border-transparent outline-none transition resize-none ${formErrors.email ? 'border-red-500' : 'border-neutral-300'}  bg-white text-black`}
+                            placeholder='Email'
+                        />
+                        {formErrors.email && <p className="text-red-500 mt-1">{formErrors.email}</p>}
+                    </div>
+
+                    <div className="mb-4">
+                        <label htmlFor="subject" className="block mb-2 font-medium">Subject:</label>
+                        <input
+                            type="subject"
+                            id="subject"
+                            name="subject"
+                            value={formData.subject}
+                            onChange={handleChange}
+                            className={`w-full px-4 py-2 border rounded focus:ring-2 focus:ring-black focus:border-transparent outline-none transition resize-none ${formErrors.subject ? 'border-red-500' : 'border-neutral-300'}  bg-white text-black`}
+                            placeholder='Email'
+                        />
+                        {formErrors.subject && <p className="text-red-500 mt-1">{formErrors.subject}</p>}
+                    </div>
+
+                    <div className="mb-4">
+                        <label htmlFor="message" className="block mb-2 font-medium">Message:</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            value={formData.message}
+                            onChange={handleChange}
+                            rows={5}
+                            className={`w-full px-4 py-2 border rounded focus:ring-2 focus:ring-black focus:border-transparent outline-none transition resize-none ${formErrors.message ? 'border-red-500' : 'border-neutral-300'}  bg-white text-black`}
+                            placeholder='Message'
+                        />
+                        {formErrors.message && <p className="text-red-500 mt-1">{formErrors.message}</p>}
+                    </div>
+
+                    <button
+                        type="submit"
+                        className="cursor-pointer w-full px-6 py-2 bg-black text-white rounded hover:bg-neutral-800 transition">
+                        Send Message
+                    </button>
+                </form>
+            )}
         </div>
-        </form>
-    )
+    );
 }
