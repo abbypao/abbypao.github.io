@@ -48,7 +48,6 @@ export default function ParticlesBackground() {
               color: {
                 value: isDarkMode ? "#000000" : "#ffffff",
               },
-              image: "url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1237px-NASA_logo.svg.png')",
               position: "50% 50%",
               repeat: "no-repeat",
               size: "20%",
