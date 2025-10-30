@@ -5,7 +5,7 @@ export default function Page() {
         About Me
       </h1>
       <p className="mb-4">
-        {`plc`}
+        {`Nothing to see here`}
       </p>
       <div className="my-8">
       </div>
