@@ -72,69 +72,62 @@ export default function ContactForm() {
             setTimeout(() => {
                 setFormData({ email: '', subject: '', message: '' });
                 setSubmitted(false);
-            }, 3000);
+            }, 6000);
         }
     };
 
 
 
     return (
-        <div>
-            {submitted ? (
-                <div>
-                    <p></p>
-                </div>
-            ) : (
-                <form onSubmit={handleSubmit} className={`p-6 rounded-lg border border-neutral-200 bg-white shadow-sm`}>
-                    <div className="mb-4">
-                        <label htmlFor="email" className="block mb-2 font-medium">Email:</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            className={`w-full px-4 py-2 border rounded focus:ring-2 focus:ring-black focus:border-transparent outline-none transition resize-none ${formErrors.email ? 'border-red-500' : 'border-neutral-300'}  bg-white text-black`}
-                            placeholder='Email'
-                        />
-                        {formErrors.email && <p className="text-red-500 mt-1">{formErrors.email}</p>}
-                    </div>
+        <form onSubmit={handleSubmit} className={`p-6 rounded-lg border border-neutral-200 bg-white shadow-sm`}>
+            <div className="mb-4">
+                <label htmlFor="email" className="block mb-2 font-medium">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className={`w-full px-4 py-2 border rounded focus:ring-2 focus:ring-black focus:border-transparent outline-none transition resize-none ${formErrors.email ? 'border-red-500' : 'border-neutral-300'}  bg-white text-black`}
+                    placeholder='Email'
+                />
+                {formErrors.email && <p className="text-red-500 mt-1">{formErrors.email}</p>}
+            </div>
 
-                    <div className="mb-4">
-                        <label htmlFor="subject" className="block mb-2 font-medium">Subject:</label>
-                        <input
-                            type="subject"
-                            id="subject"
-                            name="subject"
-                            value={formData.subject}
-                            onChange={handleChange}
-                            className={`w-full px-4 py-2 border rounded focus:ring-2 focus:ring-black focus:border-transparent outline-none transition resize-none ${formErrors.subject ? 'border-red-500' : 'border-neutral-300'}  bg-white text-black`}
-                            placeholder='Email'
-                        />
-                        {formErrors.subject && <p className="text-red-500 mt-1">{formErrors.subject}</p>}
-                    </div>
+            <div className="mb-4">
+                <label htmlFor="subject" className="block mb-2 font-medium">Subject:</label>
+                <input
+                    type="subject"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className={`w-full px-4 py-2 border rounded focus:ring-2 focus:ring-black focus:border-transparent outline-none transition resize-none ${formErrors.subject ? 'border-red-500' : 'border-neutral-300'}  bg-white text-black`}
+                    placeholder='Email'
+                />
+                {formErrors.subject && <p className="text-red-500 mt-1">{formErrors.subject}</p>}
+            </div>
 
-                    <div className="mb-4">
-                        <label htmlFor="message" className="block mb-2 font-medium">Message:</label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            value={formData.message}
-                            onChange={handleChange}
-                            rows={5}
-                            className={`w-full px-4 py-2 border rounded focus:ring-2 focus:ring-black focus:border-transparent outline-none transition resize-none ${formErrors.message ? 'border-red-500' : 'border-neutral-300'}  bg-white text-black`}
-                            placeholder='Message'
-                        />
-                        {formErrors.message && <p className="text-red-500 mt-1">{formErrors.message}</p>}
-                    </div>
+            <div className="mb-4">
+                <label htmlFor="message" className="block mb-2 font-medium">Message:</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={5}
+                    className={`w-full px-4 py-2 border rounded focus:ring-2 focus:ring-black focus:border-transparent outline-none transition resize-none ${formErrors.message ? 'border-red-500' : 'border-neutral-300'}  bg-white text-black`}
+                    placeholder='Message'
+                />
+                {formErrors.message && <p className="text-red-500 mt-1">{formErrors.message}</p>}
+            </div>
 
-                    <button
-                        type="submit"
-                        className="cursor-pointer w-full px-6 py-2 bg-black text-white rounded hover:bg-neutral-800 transition">
-                        Send Message
-                    </button>
-                </form>
-            )}
-        </div>
+            <button
+                type="submit"
+                className="cursor-pointer w-full px-6 py-2 bg-black text-white rounded hover:bg-neutral-800 transition">
+                Send Message
+            </button>
+            {submitted && <p className="text-green-800 mt-4 text-center">Your message has been sent</p>}
+        </form>
     );
 }
