@@ -75,50 +75,52 @@ export default function Page() {
                 Projects
             </h1>
 
-            <div className="mb-6 flex gap-6">
-                <label className="flex items-center gap-2 cursor-pointer group">
-                    <input
+            
+            <div className="mb-6 flex gap-6 align-right p-6 rounded-lg border border-neutral-200 border-b-0">
+                <span className="font-medium">Filter</span>
+                    <label className="ml-auto flex items-center gap-2 cursor-pointer group">
+                        <input
                         type="checkbox" 
                         checked={showHTML}
                         onChange={(e) => setShowHTML(e.target.checked)} 
                         className="sr-only"
-                    />
-                    <div className={`
-                        w-5 h-5 rounded border-2 transition-all duration-200
-                        flex items-center justify-center
-                        ${showHTML
-                            ? 'bg-neutral-900 border-neutral-900 group-hover:bg-neutral-700 group-hover:border-neutral-700'
-                            : 'border-neutral-400 group-hover:border-neutral-600'
-                        }`}>
-                        <svg>
-
-                        </svg>
-                    </div>
-                    <span>HTML</span>
-                </label>
-                <label className="flex items-center gap-2 cursor-pointer group">
-                    <input 
-                        type="checkbox"
-                        checked={showJavaScript}
-                        onChange={(e) => setShowJavaScript(e.target.checked)}
-                        className="sr-only"
-                    />
-                    <div className={`
-                        w-5 h-5 rounded border-2 transition-all duration-200
-                        flex items-center justify-center
-                        ${showJavaScript
-                            ? 'bg-neutral-900 border-neutral-900 group-hover:bg-neutral-700 group-hover:border-neutral-700'
-                            : 'border-neutral-400 group-hover:border-neutral-600'
-                        }`}>
-                        <svg>
-
-                        </svg>
-                    </div>
-                    <span>JavaScript</span>
-                </label>
+                        />
+                        <div className={`
+                            w-5 h-5 text-white select-none rounded border-2 transition-all duration-100 flex items-center justify-center
+                            ${showHTML
+                                ? 'bg-blue-600 border-blue-600 hover:bg-blue-400 hover:border-blue-400'
+                                : 'border-neutral-400'
+                            }`}>
+                            {showHTML && '✓'}
+                        </div>
+                        <span className={` 
+                            transition-all duration-100 ease-in
+                            ${showHTML ? 'text-blue-600' : 'text-black'} 
+                            `}>HTML</span>
+                    </label>
+                    <label className="flex items-center gap-2 cursor-pointer group">
+                        <input 
+                            type="checkbox"
+                            checked={showJavaScript}
+                            onChange={(e) => setShowJavaScript(e.target.checked)}
+                            className="sr-only"
+                        />
+                        <div className={`
+                            w-5 h-5 text-white select-none rounded border-2 transition-all duration-100 flex items-center justify-center 
+                            ${showJavaScript
+                                ? 'bg-blue-600 border-blue-600 hover:bg-blue-400 hover:border-blue-400'
+                                : 'border-neutral-400'
+                            }`}>
+                            {showJavaScript && '✓'}
+                        </div>
+                        <span className={` 
+                            transition-all duration-100 ease-in
+                            ${showJavaScript ? 'text-blue-600' : 'text-black'} 
+                            `}>JavaScript</span>
+                    </label>
             </div>
             
-            <div className="my-8 space-y-6">
+            <div className="my-8 mx-2 space-y-6">
                 {filteredProjects.length > 0 ? (
                     filteredProjects.map((project, index) => (
                         <div key={index} className="flex items-start gap-3">
@@ -138,7 +140,7 @@ export default function Page() {
                         </div>
                     ))
                 ) : (
-                    <p className="text-neutral-600">No projects to display.</p>
+                    <p className="text-neutral-600">Nothing has been selected</p>
                 )}
             </div>
         </section>

@@ -47,7 +47,7 @@ export default function ParticlesBackground() {
                   mode: "repulse",
                 },
                 onHover: {
-                  enable: true,
+                  enable: false,
                   mode: "bubble",
                 },
                 resize: true,
