@@ -13,6 +13,12 @@ const navItems = {
   '/projects': {
     name: 'projects',
   },
+  '/favorites' : {
+    name: 'favorites',
+  },
+  '/hobby' : {
+    name: 'hobbies',
+  },
 }
 
 export function Navbar() {
