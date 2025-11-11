@@ -59,8 +59,17 @@ export default function Page() {
             {selected === 'animals' && (
                 <div>
                     <h1 className="mb-2 text-lg font-semibold">Dinosaurs</h1>
+                        <img src="/tarbosaurus.webp"></img>
+                        <img src="/trex.webp"></img>
+                        <img src="/carno.png"></img>
                     <h1 className="mb-2 text-lg font-semibold">Birds</h1>
+                        <img src="/beardedvulture.jpeg"></img>
+                        <img src="/goldeneagle.jpg"></img>
+                        <img src="/raven.webp"></img>
                     <h1 className="mb-2 text-lg font-semibold">Reptiles</h1>
+                        <img src="/boa.avif"></img>
+                        <img src="/komododragon.avif"></img>
+                        <img src="/crocodile.jpg"></img>
                 </div>
             )}
 
