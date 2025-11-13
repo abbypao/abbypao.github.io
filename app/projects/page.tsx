@@ -76,7 +76,7 @@ export default function Page() {
             </h1>
 
             
-            <div className="mb-6 flex gap-6 align-right p-6 rounded-lg border border-neutral-200 border-b-0">
+            <div className="mb-6 flex gap-6 align-right p-6 rounded-lg border border-neutral-200 border-x-0">
                 <span className="font-medium">Filter</span>
                     <label className="ml-auto flex items-center gap-2 cursor-pointer group">
                         <input

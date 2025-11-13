@@ -1,78 +1,52 @@
 'use client'
 
-import { useState } from "react"
-
 export default function Page() {
-    const [selected, setSelected] = useState('music') 
-
     return ( 
         <section>
-            <div className="mb-8 w-full">
+            <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
+                Favorites
+            </h1>
 
-                <span className="text-2xl font-semibold tracking-tighter">Favorites</span>
-
-                <span className="flex gap-6 mt-2">
-                    <span 
-                        className={`cursor-pointer transition-all hover:text-neutral-400 ${selected === 'music' ? 'font-medium ' : ''}`}
-                        onClick={() => setSelected('music')}
-                    >Music</span>
-                    <span
-                        className={`cursor-pointer transition-all hover:text-neutral-400 ${selected === 'games' ? 'font-medium' : ''}`}
-                        onClick={() => setSelected('games')}
-                    >Games</span>
-                    <span
-                        className={`cursor-pointer transition-all hover:text-neutral-400 ${selected === 'cars' ? 'font-medium' : ''}`}
-                        onClick={() => setSelected('cars')}
-                    >Cars</span>
-                    <span
-                        className={`cursor-pointer transition-all hover:text-neutral-400 ${selected === 'animals' ? 'font-medium' : ''}`}
-                        onClick={() => setSelected('animals')}
-                    >Animals</span>
+            <div className="mb-6 flex gap-6 align-right p-6 rounded-lg border border-neutral-200 border-x-0">
+                <span className="font-medium">
+                    Favorite Music Artist
                 </span>
+            
+                <span className="ml-auto flex items-center gap-1">
+                    The Weeknd
+                    <img src="xo.png" className="w-4 h-4"></img>
+                </span> 
+            </div>
+
+            <div className="grid grid-cols-2 gap-0">
+                <img className="w-full h-full object-contain" src="starboy.jpg"></img>
+                <img className="w-full h-full object-contain" src="afterhours.webp"></img>
+                <img className="w-full h-full object-contain" src="bbtm.jpg"></img>
+                <img className="w-full h-full object-contain" src="mdm.jpg"></img>
+                <img className="w-full h-full object-contain" src="kissland.png"></img>
+                <img className="w-full h-full object-contain" src="trilogy.png"></img>
+            </div>
+
+            <div className="my-6 flex gap-6 align-right p-6 rounded-lg border border-neutral-200 border-x-0">
+                <span className="font-medium">
+                    Favorite Game
+                </span>
+
+                <a href="https://www.youtube.com/watch?v=24dtP87n-lg" className="ml-auto flex items-center gap-1 cursor-pointer">
+                    Path of Titans
+                    <img src="alderongames.jpg" className="w-4 h-4"></img>
+                </a>
 
             </div>
 
-
-            {selected === 'music' && (
-                <div>
-                    <h1 className="mb-2 text-lg font-semibold">The Weeknd</h1>
-                    <h1 className="mb-2 text-lg font-semibold">The Neighborhood</h1>
-                    <h1 className="mb-2 text-lg font-semibold">Tame Impala</h1>
-                </div>
-            )}
-            {selected === 'games' && (
-                <div>
-                    <h1 className="mb-2 text-lg font-semibold">Path of Titans</h1>
-                    <h1 className="mb-2 text-lg font-semibold">Red Dead Redemption 2</h1>
-                    <h1 className="mb-2 text-lg font-semibold">Baldurs Gate 3</h1>
-                </div>
-            )}
-            
-            {selected === 'cars' && (
-                <div>
-                    <h1 className="mb-2 text-lg font-semibold">Toyota GR Supra</h1>
-                    <h1 className="mb-2 text-lg font-semibold">Ford Mustang Dark Horse</h1>
-                    <h1 className="mb-2 text-lg font-semibold">Chevrolet Corvette C8</h1>
-                </div>
-            )}
-
-            {selected === 'animals' && (
-                <div>
-                    <h1 className="mb-2 text-lg font-semibold">Dinosaurs</h1>
-                        <img src="/tarbosaurus.webp"></img>
-                        <img src="/trex.webp"></img>
-                        <img src="/carno.png"></img>
-                    <h1 className="mb-2 text-lg font-semibold">Birds</h1>
-                        <img src="/beardedvulture.jpeg"></img>
-                        <img src="/goldeneagle.jpg"></img>
-                        <img src="/raven.webp"></img>
-                    <h1 className="mb-2 text-lg font-semibold">Reptiles</h1>
-                        <img src="/boa.avif"></img>
-                        <img src="/komododragon.avif"></img>
-                        <img src="/crocodile.jpg"></img>
-                </div>
-            )}
-
+            <div className="grid grid-cols-2">
+                <img className="w-full h-full object-contain" src="potspino.jpg"></img>
+                <img className="w-full h-full object-contain" src="potrextrike.jpg"></img>
+                <img className="w-full h-full object-contain" src="dilos.png"></img>
+                <img className="w-full h-full object-contain" src="iggy.png"></img>
+                <img className="w-full h-full object-contain" src="styras.png"></img>
+                <img className="w-full h-full object-contain" src="rex.jpg"></img>
+            </div>
         </section>
     )
 }
