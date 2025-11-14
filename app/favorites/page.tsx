@@ -32,7 +32,9 @@ export default function Page() {
                     Favorite Game
                 </span>
 
-                <a href="https://www.youtube.com/watch?v=24dtP87n-lg" className="ml-auto flex items-center gap-1 cursor-pointer">
+                <a href="https://www.youtube.com/watch?v=24dtP87n-lg" 
+                className="ml-auto flex items-center gap-1 cursor-pointer
+                transition-all duration-100 hover:text-neutral-400" title="Watch the trailer">
                     Path of Titans
                     <img src="alderongames.jpg" className="w-4 h-4"></img>
                 </a>

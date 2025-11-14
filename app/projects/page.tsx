@@ -45,22 +45,37 @@ export default function Page() {
         {
             name: "Chapter 1",
             description: "JavaScript",
-            link: "/javascript/chapter1/js01.html"
+            link: "/javascript/chapter1/chapter/js01.html"
         },
         {
             name: "Chapter 1b",
             description: "JavaScript",
-            link: "/javascript/chapter1/js01b.html"
+            link: "/javascript/chapter1/chapter/js01b.html"
         },
         {
-            name: "Chapter 2",
+            name: "Chapter 1, Project 2",
             description: "JavaScript",
-            link: "/javascript/project01-02/project01-02.html"
+            link: "/javascript/chapter1/project2/project01-02.html"
         },
         {
-            name: "Chapter 4",
+            name: "Chapter 1, Project 4",
             description: "JavaScript",
-            link: "/javascript/project01-04/project01-04.html"
+            link: "/javascript/chapter1/project4/project01-04.html"
+        },
+        {
+            name: "Chapter 3",
+            description: "JavaScript",
+            link: "/javascript/chapter3/chapter/js03.html"
+        },
+        {
+            name: "Chapter 3, Project 3",
+            description: "JavaScript",
+            link: "/javascript/chapter3/project3/project03-03.html"
+        },
+        {
+            name: "Chapter 3, Project 4",
+            description: "JavaScript",
+            link: "/javascript/chapter3/project4/project03-04.html"
         },
     ]
     const filteredProjects = projects.filter(project => {
