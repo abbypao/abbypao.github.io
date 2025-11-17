@@ -17,12 +17,12 @@ export default function Page() {
                     <img src="content/the-weeknd/logo.png" className="w-4 h-4"></img>
                 </span> 
             </div>
-
-            <div className="grid grid-cols-2 gap-0">
-                <img className="w-full h-full object-contain" src="content/the-weeknd/starboy.jpg"></img>
+            <audio controls></audio>
+            <div className="grid grid-cols-3 gap-1">
                 <img className="w-full h-full object-contain" src="content/the-weeknd/afterhours.webp"></img>
-                <img className="w-full h-full object-contain" src="content/the-weeknd/bbtm.jpg"></img>
                 <img className="w-full h-full object-contain" src="content/the-weeknd/mdm.jpg"></img>
+                <img className="w-full h-full object-contain" src="content/the-weeknd/starboy.jpg"></img>
+                <img className="w-full h-full object-contain" src="content/the-weeknd/bbtm.jpg"></img>
                 <img className="w-full h-full object-contain" src="content/the-weeknd/kissland.png"></img>
                 <img className="w-full h-full object-contain" src="content/the-weeknd/trilogy.png"></img>
             </div>
@@ -32,17 +32,15 @@ export default function Page() {
                     Favorite Game
                 </span>
 
-                <a href="https://www.youtube.com/watch?v=24dtP87n-lg" 
-                className="ml-auto flex items-center gap-1 cursor-pointer
-                transition-all duration-100 hover:text-neutral-400" title="Watch the trailer">
+                <span  className="ml-auto flex items-center gap-1">
                     Path of Titans
                     <img src="content/path-of-titans/logo.jpg" className="w-4 h-4"></img>
-                </a>
+                </span>
 
             </div>
 
-            <video controls src="content/path-of-titans/rex_pvp.mp4"></video>
-            <div className="grid grid-cols-2">
+            
+            <div className="grid grid-cols-2 gap-1">
                 <img className="w-full h-full object-contain" src="content/path-of-titans/spinosaurus.jpg"></img>
                 <img className="w-full h-full object-contain" src="content/path-of-titans/eotriceratops.jpg"></img>
                 <img className="w-full h-full object-contain" src="content/path-of-titans/dilophosaurus.png"></img>
@@ -51,6 +49,7 @@ export default function Page() {
                 <img className="w-full h-full object-contain" src="content/path-of-titans/tyrannosaurus.jpg"></img>
                 
             </div>
+            <video controls className="mt-1" src="content/path-of-titans/rex_pvp.mp4"></video>
         </section>
     )
 }

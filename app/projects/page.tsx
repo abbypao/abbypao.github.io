@@ -121,7 +121,7 @@ export default function Page() {
                         checked={showHTML}
                         onChange={(e) => {
                             setShowHTML(e.target.checked);
-                            setShowNotGraded(!e.target.checked)
+                            if (showNotGraded) setShowNotGraded(!e.target.checked)
                             }
                         }
                         className="sr-only"
@@ -145,7 +145,7 @@ export default function Page() {
                         checked={showJavaScript}
                         onChange={(e) => {
                             setShowJavaScript(e.target.checked);
-                            setShowNotGraded(!e.target.checked);
+                            if (showNotGraded) setShowNotGraded(!e.target.checked);
                             }
                         }
                         className="sr-only"
@@ -207,8 +207,8 @@ export default function Page() {
                                     <a className="hover:text-neutral-400 transition-all"
                                         href={project.link}>
                                         {project.name}
-                                        <span className="text-red-500">{!project.graded && ' Not Graded'}</span>
                                     </a>
+                                    <span className="text-red-500 ml-4">{!project.graded && 'Not Graded'}</span>
                                 </p>
                                 <p className="text-neutral-600">{project.description}</p>
                             </div>
