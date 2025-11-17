@@ -2,7 +2,7 @@ export default function Page() {
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        About Me
+        About
       </h1>
       <p className="mb-4">
         {`Nothing to see here`}
