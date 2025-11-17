@@ -2,5 +2,5 @@
 2:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
 3:"$Sreact.suspense"
 :HL["/egg.png","image"]
-0:{"buildId":"9NYCR2eFSCPMfPiVtyP3L","rsc":["$","$1","c",{"children":[["$","section",null,{"children":[["$","h1",null,{"className":"mb-8 text-2xl font-semibold tracking-tighter","children":"Page Not Found"}],["$","p",null,{"className":"mb-4","children":"So here's an easter egg..."}],["$","img",null,{"src":"/egg.png","alt":"Easter Egg","className":"w-64 h-85 mx-auto"}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"WGMzZav4Z3O1n70eGU0Bc","rsc":["$","$1","c",{"children":[["$","section",null,{"children":[["$","h1",null,{"className":"mb-8 text-2xl font-semibold tracking-tighter","children":"Page Not Found"}],["$","p",null,{"className":"mb-4","children":"So here's an easter egg..."}],["$","img",null,{"src":"/egg.png","alt":"Easter Egg","className":"w-64 h-85 mx-auto"}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
 4:null
