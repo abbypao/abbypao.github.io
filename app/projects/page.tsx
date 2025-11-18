@@ -54,7 +54,7 @@ export default function Page() {
             name: "Fitness Chapter 9",
             description: "HTML",
             link: "/html/fitness9/index.html",
-            graded: false
+            graded: true
         },
         {
             name: "Chapter 1",
@@ -84,19 +84,19 @@ export default function Page() {
             name: "Chapter 3",
             description: "JavaScript",
             link: "/javascript/chapter3/chapter/js03.html",
-            graded: false
+            graded: true
         },
         {
             name: "Chapter 3, Project 3",
             description: "JavaScript",
             link: "/javascript/chapter3/project3/project03-03.html",
-            graded: false
+            graded: true
         },
         {
             name: "Chapter 3, Project 4",
             description: "JavaScript",
             link: "/javascript/chapter3/project4/project03-04.html",
-            graded: false
+            graded: true
         },
     ]
     const filteredProjects = projects.filter(project => {
