@@ -16,7 +16,7 @@ export default function Page() {
         if (!audio) return
 
         if (isPlaying) { audio.pause() }
-            else audio.play()
+        else audio.play()
 
         setIsPlaying(!isPlaying)
     }
@@ -39,7 +39,7 @@ export default function Page() {
             setRemainingTime(`-${remainingMins}:${remainingSecs.toString().padStart(2, '0')}`)
 
         }
-        
+
 
         audio.addEventListener('timeupdate', updateProgress)
         return () => audio.removeEventListener('timeupdate', updateProgress)
@@ -62,10 +62,10 @@ export default function Page() {
                 </span>
             </div>
 
-            <span className="font-medium">The Weeknd's Most Streamed Song</span>
+            <span className="font-medium text-lg">The Weeknd's Most Streamed Song</span>
 
-            <audio 
-                ref={audioRef} 
+            <audio
+                ref={audioRef}
                 src="file_example_MP3_2MG.mp3"
                 onLoadedMetadata={(e) => {
                     const mins = 3;
@@ -76,7 +76,7 @@ export default function Page() {
 
             <div className="mb-6 flex rounded border border-neutral-200 bg-white shadow-sm group">
                 <img src="content/the-weeknd/blindinglights.jpg" className="size-32 rounded-l" />
-                
+
                 <div className="w-full">
                     <div className="w-full flex flex-col items-center justify-center gap-3 px-6">
                         <span className="font-medium">Blinding Lights</span>
@@ -92,27 +92,62 @@ export default function Page() {
                             <span>{currentTime}</span>
                             <span>{remainingTime}</span>
                         </div>
-                        
+
                         <div className="relative w-full h-1 bg-neutral-300 cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100">
                             <div
                                 className="absolute h-full bg-neutral-700 transition-all duration-100 flex items-center justify-end"
                                 style={{ width: `${progress}%` }}
-                            > 
-                            <div className="h-2 w-2 border border-neutral-700 border-b-0 bg-neutral-300  relative -top-1" />
+                            >
+                                <div className="h-2 w-2 border border-neutral-700 border-b-0 bg-neutral-300  relative -top-1" />
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-1">
-                <img className="w-full h-full object-contain" src="content/the-weeknd/afterhours.webp"></img>
-                <img className="w-full h-full object-contain" src="content/the-weeknd/mdm.jpg"></img>
-                <img className="w-full h-full object-contain" src="content/the-weeknd/starboy.jpg"></img>
-                <img className="w-full h-full object-contain" src="content/the-weeknd/bbtm.jpg"></img>
-                <img className="w-full h-full object-contain" src="content/the-weeknd/kissland.png"></img>
-                <img className="w-full h-full object-contain" src="content/the-weeknd/trilogy.png"></img>
+            <span className="font-medium text-lg">My Favorite Song</span>
+
+            <audio
+                ref={audioRef}
+                src="file_example_MP3_2MG.mp3"
+                onLoadedMetadata={(e) => {
+                    const mins = 3;
+                    const secs = 22;
+                    setDuration((mins * 60) + secs);
+                }}
+            />
+
+            <div className="mb-6 flex rounded border border-neutral-200 bg-white shadow-sm group">
+                <img src="content/the-weeknd/trilogy.png" className="size-32 rounded-l" />
+
+                <div className="w-full">
+                    <div className="w-full flex flex-col items-center justify-center gap-3 px-6">
+                        <span className="font-medium">The Knowing</span>
+                        <span className="font-light">The Weeknd - Trilogy</span>
+
+                        <button onClick={togglePlay} className="cursor-pointer">
+                            {isPlaying ? <Pause strokeWidth={1} /> : <Play strokeWidth={1} />}
+                        </button>
+                    </div>
+
+                    <div className="w-full flex flex-col gap-1">
+                        <div className="flex justify-between mx-2 transition-all duration-300 opacity-0 group-hover:opacity-100">
+                            <span>{currentTime}</span>
+                            <span>{remainingTime}</span>
+                        </div>
+
+                        <div className="relative w-full h-1 bg-neutral-300 cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100">
+                            <div
+                                className="absolute h-full bg-neutral-700 transition-all duration-100 flex items-center justify-end"
+                                style={{ width: `${progress}%` }}
+                            >
+                                <div className="h-2 w-2 border border-neutral-700 border-b-0 bg-neutral-300  relative -top-1" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div className="my-6 flex gap-6 align-right p-6 rounded-lg border border-neutral-200 border-x-0">
@@ -127,6 +162,10 @@ export default function Page() {
 
             </div>
 
+            <div className="mb-6">
+                <span className="font-medium text-lg flex items-center justify-center">Trailer</span>
+                <video controls className="w-full h-full" src="content/path-of-titans/videoplayback.mp4" />
+            </div>
 
             <div className="grid grid-cols-2 gap-1">
                 <img className="w-full h-full object-contain" src="content/path-of-titans/spinosaurus.jpg"></img>
@@ -135,9 +174,8 @@ export default function Page() {
                 <img className="w-full h-full object-contain" src="content/path-of-titans/iguanodon.png"></img>
                 <img className="w-full h-full object-contain" src="content/path-of-titans/styracosaurus.png"></img>
                 <img className="w-full h-full object-contain" src="content/path-of-titans/tyrannosaurus.jpg"></img>
-
             </div>
-            <video controls className="mt-1" src="content/path-of-titans/rex_pvp.mp4"></video>
+
         </section>
     )
 }
