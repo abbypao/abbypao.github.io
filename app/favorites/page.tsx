@@ -1,55 +1,13 @@
 'use client'
 
-import { useState, useEffect, useRef } from "react"
-import { Play, Pause } from 'lucide-react';
-
 export default function Page() {
-    const audioRef = useRef<HTMLAudioElement>(null)
-    const [isPlaying, setIsPlaying] = useState(false)
-    const [duration, setDuration] = useState(0)
-    const [currentTime, setCurrentTime] = useState('0:00')
-    const [remainingTime, setRemainingTime] = useState('0:00')
-    const [progress, setProgress] = useState(0)
-
-    const togglePlay = () => {
-        const audio = audioRef.current
-        if (!audio) return
-
-        if (isPlaying) { audio.pause() }
-        else audio.play()
-
-        setIsPlaying(!isPlaying)
-    }
-
-    useEffect(() => {
-        const audio = audioRef.current
-        if (!audio) return
-
-        const updateProgress = () => {
-            const percent = (audio.currentTime / audio.duration) * 100
-            setProgress(percent)
-
-            const mins = Math.floor(audio.currentTime / 60)
-            const secs = Math.floor(audio.currentTime % 60)
-            setCurrentTime(`${mins}:${secs.toString().padStart(2, '0')}`)
-
-            const remainingSeconds = Math.floor(audio.duration - audio.currentTime)
-            const remainingMins = Math.floor(remainingSeconds / 60)
-            const remainingSecs = remainingSeconds % 60
-            setRemainingTime(`-${remainingMins}:${remainingSecs.toString().padStart(2, '0')}`)
-
-        }
-
-
-        audio.addEventListener('timeupdate', updateProgress)
-        return () => audio.removeEventListener('timeupdate', updateProgress)
-    }, [])
-
     return (
         <section>
             <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
                 Favorites
             </h1>
+
+    {/* Favorite Music Artist Section */}
 
             <div className="mb-6 flex gap-6 align-right p-6 rounded-lg border border-neutral-200 border-x-0">
                 <span className="font-medium">
@@ -62,93 +20,9 @@ export default function Page() {
                 </span>
             </div>
 
-            <span className="font-medium text-lg">The Weeknd's Most Streamed Song</span>
-
-            <audio
-                ref={audioRef}
-                src="file_example_MP3_2MG.mp3"
-                onLoadedMetadata={(e) => {
-                    const mins = 3;
-                    const secs = 22;
-                    setDuration((mins * 60) + secs);
-                }}
-            />
-
-            <div className="mb-6 flex rounded border border-neutral-200 bg-white shadow-sm group">
-                <img src="content/the-weeknd/blindinglights.jpg" className="size-32 rounded-l" />
-
-                <div className="w-full">
-                    <div className="w-full flex flex-col items-center justify-center gap-3 px-6">
-                        <span className="font-medium">Blinding Lights</span>
-                        <span className="font-light">The Weeknd - After Hours</span>
-
-                        <button onClick={togglePlay} className="cursor-pointer">
-                            {isPlaying ? <Pause strokeWidth={1} /> : <Play strokeWidth={1} />}
-                        </button>
-                    </div>
-
-                    <div className="w-full flex flex-col gap-1">
-                        <div className="flex justify-between mx-2 transition-all duration-300 opacity-0 group-hover:opacity-100">
-                            <span>{currentTime}</span>
-                            <span>{remainingTime}</span>
-                        </div>
-
-                        <div className="relative w-full h-1 bg-neutral-300 cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100">
-                            <div
-                                className="absolute h-full bg-neutral-700 transition-all duration-100 flex items-center justify-end"
-                                style={{ width: `${progress}%` }}
-                            >
-                                <div className="h-2 w-2 border border-neutral-700 border-b-0 bg-neutral-300  relative -top-1" />
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <span className="font-medium text-lg">My Favorite Song</span>
-
-            <audio
-                ref={audioRef}
-                src="file_example_MP3_2MG.mp3"
-                onLoadedMetadata={(e) => {
-                    const mins = 3;
-                    const secs = 22;
-                    setDuration((mins * 60) + secs);
-                }}
-            />
-
-            <div className="mb-6 flex rounded border border-neutral-200 bg-white shadow-sm group">
-                <img src="content/the-weeknd/trilogy.png" className="size-32 rounded-l" />
-
-                <div className="w-full">
-                    <div className="w-full flex flex-col items-center justify-center gap-3 px-6">
-                        <span className="font-medium">The Knowing</span>
-                        <span className="font-light">The Weeknd - Trilogy</span>
-
-                        <button onClick={togglePlay} className="cursor-pointer">
-                            {isPlaying ? <Pause strokeWidth={1} /> : <Play strokeWidth={1} />}
-                        </button>
-                    </div>
-
-                    <div className="w-full flex flex-col gap-1">
-                        <div className="flex justify-between mx-2 transition-all duration-300 opacity-0 group-hover:opacity-100">
-                            <span>{currentTime}</span>
-                            <span>{remainingTime}</span>
-                        </div>
-
-                        <div className="relative w-full h-1 bg-neutral-300 cursor-pointer transition-all duration-300 opacity-0 group-hover:opacity-100">
-                            <div
-                                className="absolute h-full bg-neutral-700 transition-all duration-100 flex items-center justify-end"
-                                style={{ width: `${progress}%` }}
-                            >
-                                <div className="h-2 w-2 border border-neutral-700 border-b-0 bg-neutral-300  relative -top-1" />
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <img src="content/the-weeknd/the_weeknd.jpg" />
+            
+    {/* Favorite Game Section */}
 
             <div className="my-6 flex gap-6 align-right p-6 rounded-lg border border-neutral-200 border-x-0">
                 <span className="font-medium">
@@ -162,20 +36,15 @@ export default function Page() {
 
             </div>
 
-            <div className="mb-6">
-                <span className="font-medium text-lg flex items-center justify-center">Trailer</span>
-                <video controls className="w-full h-full" src="content/path-of-titans/videoplayback.mp4" />
+            <div className="mb-6 aspect-video">
+                <iframe className="w-full h-full"
+                 src="https://www.youtube.com/embed/24dtP87n-lg?si=IUev8IGdEqDKQzI5"
+                title="YouTube video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen
+                />
             </div>
-
-            <div className="grid grid-cols-2 gap-1">
-                <img className="w-full h-full object-contain" src="content/path-of-titans/spinosaurus.jpg"></img>
-                <img className="w-full h-full object-contain" src="content/path-of-titans/eotriceratops.jpg"></img>
-                <img className="w-full h-full object-contain" src="content/path-of-titans/dilophosaurus.png"></img>
-                <img className="w-full h-full object-contain" src="content/path-of-titans/iguanodon.png"></img>
-                <img className="w-full h-full object-contain" src="content/path-of-titans/styracosaurus.png"></img>
-                <img className="w-full h-full object-contain" src="content/path-of-titans/tyrannosaurus.jpg"></img>
-            </div>
-
         </section>
     )
 }

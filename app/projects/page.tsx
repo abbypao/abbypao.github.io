@@ -57,6 +57,12 @@ export default function Page() {
             graded: true
         },
         {
+            name: "Fitness Chapter 10",
+            description: "HTML",
+            link: "/html/fitness10/index.html",
+            graded: false
+        },
+        {
             name: "Chapter 1",
             description: "JavaScript",
             link: "/javascript/chapter1/chapter/js01.html",
