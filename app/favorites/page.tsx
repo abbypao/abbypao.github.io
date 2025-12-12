@@ -20,7 +20,7 @@ export default function Page() {
                 </span>
             </div>
 
-            <img src="content/the-weeknd/the_weeknd.jpg" />
+            <img  src="content/the-weeknd/the_weeknd.jpg" />
             
     {/* Favorite Game Section */}
 

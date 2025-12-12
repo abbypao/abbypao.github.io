@@ -63,6 +63,18 @@ export default function Page() {
             graded: false
         },
         {
+            name: "Fitness Chapter 11",
+            description: "HTML",
+            link: "/html/fitness11/index.html",
+            graded: false
+        },
+        {
+            name: "Fitness Chapter 12",
+            description: "HTML",
+            link: "/html/fitness12/index.html",
+            graded: false
+        },
+        {
             name: "Chapter 1",
             description: "JavaScript",
             link: "/javascript/chapter1/chapter/js01.html",
@@ -211,7 +223,7 @@ export default function Page() {
                             <div>
                                 <p className="text-neutral-900">
                                     <a className="hover:text-neutral-400 transition-all"
-                                        href={project.link}>
+                                        href={project.link} target="_blank">
                                         {project.name}
                                     </a>
                                     <span className="text-red-500 ml-4">{!project.graded && 'Not Graded'}</span>

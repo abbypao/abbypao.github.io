@@ -5,7 +5,7 @@ export default function NotFound() {
         Page Not Found
       </h1>
       <p className="mb-4">So here's an easter egg...</p>
-      <img src="content/egg.png" alt="Easter Egg" className="w-64 h-85 mx-auto" />
+      <img src="/content/egg.png" alt="Easter Egg" className="w-64 h-85 mx-auto" />
     </section>
   )
 }

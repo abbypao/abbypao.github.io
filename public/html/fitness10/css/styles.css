@@ -1,9 +1,4 @@
-/*
-	Ms. Little September 16, 2025
-*/
-
-body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section,
-article, aside, audio, video {
+body,header,nav,main,footer,h1,div,img,ul,figure,figcaption,section,article,aside,audio,video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -14,7 +9,8 @@ body {
   background-color: #000;
 }
 
-img, video {
+img, 
+video {
   display: block;
   max-width: 100%;
 }
@@ -35,10 +31,11 @@ header {
 header img {
   margin: 0 auto;
 }
+
 /* styles for navigation */
 .mobile-nav a {
   color: #fff;
-  font-family: 'Francois One', sans-serif;
+  font-family: "Francois One", sans-serif;
   text-align: center;
   font-size: 2em;
   text-decoration: none;
@@ -53,29 +50,13 @@ header img {
   top: 0;
 }
 
-nav li {
-  font-size: 1.5em;
-  font-family: "Francois One", sans-serif;
-  border-top: 1px solid #fff;
-}
-
-nav li:first-child {
-  border-top: none;
-}
-
-nav li a {
-  display: block;
-  color: #fff; /*white, rgb(255, 255, 255)*/
-  padding: 0.5em 1em;
-  text-decoration: none;
-}
-
 /*Show mobile class, hide tablet-desktop class and menu-links id */
 .mobile {
   display: block;
 }
 
-.tablet-desktop, #menu-links {
+.tablet-desktop,
+#menu-links {
   display: none;
 }
 
@@ -135,9 +116,7 @@ article:nth-of-type(2) {
   margin-left: 10%;
 }
 
-#weights,
-#cardio,
-#training {
+#weights, #cardio, #training {
   /*id names*/
   margin: 0 2%;
 }
@@ -152,7 +131,8 @@ article:nth-of-type(2) {
 
 #contact .contact-email-link {
   /*ids begin with #  */
-  color: #660; /*#666600*/
+  color: #660;
+  /*#666600*/
   text-decoration: none;
 }
 
@@ -187,10 +167,7 @@ article:nth-of-type(2) {
 }
 
 /*Style rules for form elements */
-fieldset,
-input,
-select,
-textarea {
+fieldset, input, select, textarea {
   margin-bottom: 2%;
 }
 
@@ -247,7 +224,8 @@ footer p a {
 }
 
 /* Media Query for Tablet Viewport */
-@media screen and (min-width: 630px), print {
+@media screen and (min-width: 630px),
+print {
 
   /* Tablet Viewport: Show tablet-desktop class, hide mobile class */
   .tablet-desktop {
@@ -265,17 +243,18 @@ footer p a {
 
   /*Tablet Viewport: Style rules for nav area */
   nav {
-  padding: 1%;
-  margin-bottom: 1%;
+    padding: 1%;
+    margin-bottom: 1%;
   }
 
   nav ul {
     list-style-type: none;
     text-align: center;
   }
-  
+
   nav li {
-    border-top: none;
+    font-size: 1.5em;
+    font-family: "Francois One", sans-serif;
     display: inline-block;
     border-right: 1px solid #fff;
   }
@@ -286,6 +265,9 @@ footer p a {
 
   nav li a {
     padding: 0.1em 0.75em;
+    display: block;
+    color: #fff; /*white, rgb(255, 255, 255)*/
+    text-decoration: none;;
   }
 
   /*Tablet Viewport: Style rules for main content area */
@@ -337,6 +319,20 @@ footer p a {
     padding: 0.5% 1% 2% 0;
   }
 
+  .viewex {
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  #example {
+    display: none;
+  }
+
+  .offer:hover {
+    transform: scale(1.25);
+    cursor: pointer
+  }
+
   .tel-num {
     font-size: 1.25em;
   }
@@ -360,8 +356,7 @@ footer p a {
     padding: 1%;
   }
 
-  th,
-  td {
+  th, td {
     border: 1px solid #000;
     padding: 2%;
   }
@@ -379,18 +374,34 @@ footer p a {
   /* Tablet Viewport: Style rules for form */
   #form {
     width: 70%;
-    
+
     /* Tablet Viewport: Animation */
     @-webkit-keyframes text-animation {
-      0% { font-size: 1em; }
-      50% { font-size: 2em; }
-      100% { font-size: 1.35em; }
+      0% {
+        font-size: 1em;
+      }
+
+      50% {
+        font-size: 2em;
+      }
+
+      100% {
+        font-size: 1.35em;
+      }
     }
 
     @keyframes text-animation {
-      0% { fomt-size: 1em; }
-      50% { font-size: 2em; }
-      100% { font-size: 1.35em; }
+      0% {
+        fomt-size: 1em;
+      }
+
+      50% {
+        font-size: 2em;
+      }
+
+      100% {
+        font-size: 1.35em;
+      }
     }
 
     figcaption {
@@ -401,12 +412,15 @@ footer p a {
       -webkit-animation-duration: 5s;
       animation-duration: 5s;
     }
+
     margin: 0 auto;
   }
 }
 
 /*Media Query for Desktop Viewport */
-@media screen and (min-width: 1015px), print {
+@media screen and (min-width: 1015px),
+print {
+
   /*Desktop Viewport: Style rule for header*/
   header {
     width: 25%;
@@ -441,7 +455,8 @@ footer p a {
 
   /*Desktop Viewport: Style rules for main content */
   main {
-    clear: left; /* or use clear: both */
+    clear: left;
+    /* or use clear: both */
   }
 
   main h1 {
@@ -467,9 +482,7 @@ footer p a {
     transform: translateY(10px);
   }
 
-  #weights,
-  #cardio,
-  #training {
+  #weights, #cardio, #training {
     float: left;
     width: 29%;
     margin: 0 2%;
