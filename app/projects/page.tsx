@@ -60,19 +60,19 @@ export default function Page() {
             name: "Fitness Chapter 10",
             description: "HTML",
             link: "/html/fitness10/index.html",
-            graded: false
+            graded: true
         },
         {
             name: "Fitness Chapter 11",
             description: "HTML",
             link: "/html/fitness11/index.html",
-            graded: false
+            graded: true
         },
         {
             name: "Fitness Chapter 12",
             description: "HTML",
             link: "/html/fitness12/index.html",
-            graded: false
+            graded: true
         },
         {
             name: "Chapter 1",
@@ -115,6 +115,42 @@ export default function Page() {
             description: "JavaScript",
             link: "/javascript/chapter3/project4/project03-04.html",
             graded: true
+        },
+        {
+            name: "Chapter 4",
+            description: "JavaScript",
+            link: "/javascript/chapter4/chapter/js04.html",
+            graded: false
+        },
+        {
+            name: "Chapter 4, Project 2",
+            description: "JavaScript",
+            link: "/javascript/chapter4/project02/project04-02.html",
+            graded: false
+        },
+        {
+            name: "Chapter 4, Project 4",
+            description: "JavaScript",
+            link: "/javascript/chapter4/project04/project04-04.html",
+            graded: false
+        },
+        {
+            name: "Chapter 5",
+            description: "JavaScript",
+            link: "/javascript/chapter5/chapter/js05.html",
+            graded: false
+        },
+        {
+            name: "Chapter 5, Project 2",
+            description: "JavaScript",
+            link: "/javascript/chapter5/project02/project05-02.html",
+            graded: false
+        },
+        {
+            name: "Chapter 5, Project 3",
+            description: "JavaScript",
+            link: "/javascript/chapter5/project03/project05-03.html",
+            graded: false
         },
     ]
     const filteredProjects = projects.filter(project => {
