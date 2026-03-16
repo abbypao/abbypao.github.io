@@ -120,19 +120,19 @@ export default function Page() {
             name: "Chapter 4",
             description: "JavaScript",
             link: "/javascript/chapter4/chapter/js04.html",
-            graded: false
+            graded: true
         },
         {
             name: "Chapter 4, Project 2",
             description: "JavaScript",
             link: "/javascript/chapter4/project02/project04-02.html",
-            graded: false
+            graded: true
         },
         {
             name: "Chapter 4, Project 4",
             description: "JavaScript",
             link: "/javascript/chapter4/project04/project04-04.html",
-            graded: false
+            graded: true
         },
         {
             name: "Chapter 5",
