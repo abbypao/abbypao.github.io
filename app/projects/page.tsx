@@ -138,7 +138,7 @@ export default function Page() {
             name: "Chapter 5",
             description: "JavaScript",
             link: "/javascript/chapter5/chapter/js05.html",
-            graded: false
+            graded: true
         },
         {
             name: "Chapter 5, Project 2",
